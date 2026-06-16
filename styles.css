@@ -4,14 +4,22 @@
 
 /* --- Custom Variables & Tokens --- */
 :root {
-    --color-bg: #FAF6F0;          /* Warm peach/cream background */
-    --color-accent: #F06557;      /* Vibrant red-coral accent */
-    --color-accent-hover: #D84E41;/* Darker coral for active/hover */
-    --color-text: #2A2522;        /* Dark warm charcoal for primary text */
-    --color-text-muted: #6E6560;  /* Muted grey-brown for secondary text */
-    --color-card-bg: #FFFFFF;     /* Card background */
-    --color-border: #EFE8E0;      /* Subtle border color */
-    --color-accent-bg: #FFF1EE;   /* Very light coral background tint */
+    --color-bg: #ffe5f9;
+    /* Warm peach/cream background */
+    --color-accent: #ff9bc6;
+    /* Vibrant red-coral accent */
+    --color-accent-hover: #ffbcd6;
+    /* Darker coral for active/hover */
+    --color-text: #2A2522;
+    /* Dark warm charcoal for primary text */
+    --color-text-muted: #6E6560;
+    /* Muted grey-brown for secondary text */
+    --color-card-bg: #FFFFFF;
+    /* Card background */
+    --color-border: #EFE8E0;
+    /* Subtle border color */
+    --color-accent-bg: #FFF8F2;
+    /* Very light coral background tint */
 
     --font-primary: 'Plus Jakarta Sans', sans-serif;
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -47,7 +55,10 @@ a {
     transition: var(--transition-smooth);
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     font-family: inherit;
     border: none;
     outline: none;
@@ -93,8 +104,8 @@ button, input, select, textarea {
 .fade-in-element {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-in-element.visible {
@@ -331,8 +342,15 @@ button, input, select, textarea {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(3.5); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(3.5);
+        opacity: 0;
+    }
 }
 
 /* --- Summary Section --- */
@@ -605,7 +623,8 @@ button, input, select, textarea {
 
 .progress-fill {
     height: 100%;
-    width: 0; /* Animated dynamically by app.js */
+    width: 0;
+    /* Animated dynamically by app.js */
     background-color: #FFFFFF;
     border-radius: 10px;
     transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -673,7 +692,8 @@ button, input, select, textarea {
     margin: 0 auto;
 }
 
-.edu-list, .certs-list {
+.edu-list,
+.certs-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1001,7 +1021,9 @@ button, input, select, textarea {
     color: var(--color-text-muted);
 }
 
-.form-input, .form-select, .form-textarea {
+.form-input,
+.form-select,
+.form-textarea {
     width: 100%;
     padding: 14px 20px;
     background-color: var(--color-bg);
@@ -1012,7 +1034,9 @@ button, input, select, textarea {
     transition: var(--transition-smooth);
 }
 
-.form-input:focus, .form-select:focus, .form-textarea:focus {
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
     border-color: var(--color-accent);
     background-color: #FFFFFF;
     box-shadow: 0 0 0 4px var(--color-accent-bg);
@@ -1074,6 +1098,73 @@ button, input, select, textarea {
 .toast.show {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+}
+
+/* --- Resume Section --- */
+.resume-section {
+    background-color: var(--color-bg);
+}
+
+.resume-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    padding: 60px;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-bounce);
+}
+
+.resume-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-accent);
+}
+
+.resume-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--color-accent-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.resume-content {
+    flex-grow: 1;
+}
+
+.resume-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.resume-description {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.resume-download-btn {
+    display: inline-flex;
+    align-items: center;
 }
 
 /* ==========================================================================
