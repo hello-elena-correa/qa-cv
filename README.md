@@ -15,7 +15,7 @@ This website was created as a professional space to showcase my experience, tech
 
 ## 🌐 Live Website
 
-[https://yourusername.github.io/portfolio/](https://hello-elena-correa.github.io/qa-cv/)
+[https://hello-elena-correa.github.io/portfolio/](https://hello-elena-correa.github.io/qa-cv/)
 
 ---
 
